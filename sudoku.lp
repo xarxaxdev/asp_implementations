@@ -14,9 +14,6 @@ subgrid_size(3).
 % Testing solutions: python asp/test.py -e  asp/sudoku.lp -t 100 
 % Testing single test: clingo 0 asp/sudoku.lp asp/instances/ex00.lp
 number(1..S*S) :- subgrid_size(S).
-  3 % Testing solutions: python asp/test.py -e  asp/sudoku.lp -t 100
-  2 % Testing single test: clingo 0 asp/sudoku.lp asp/instances/ex00.lp
-  1 number(1..S*S) :- subgrid_size(S).
 %subgrid(0..S*S-1) :- subgrid_size(S). %initially added this rule, since subgrids are parametrized on number it's unnecessary
 sudoku(X,Y,N) :- initial(X,Y,N).
 
